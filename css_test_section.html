@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 바로 style tag에 적용 -->
+    <!-- style tag보다는 링크가 더 우선 -->
+    <style>
+        section>li{
+            background-color: cadetblue;
+        }
+        ol~ul{
+            background-color:rgba(13, 131, 125, 0.753);
+            background-color: rgb(3,100,250);
+        }
+    </style>
+   
+    <!--css파일 적용-->
+    <link href="./css/style.css" type="text/css" rel="stylesheet">
+</head>
+
+
+<body>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JAVA</li>
+    </ul>
+
+    <!-- 선택자 Combinators -->
+    <h3>선택자 Combinators</h3>
+    <section>
+        <ul>html
+            <li>html1</li>
+            <li>html2</li>
+        </ul>
+        <ul>CSS
+            <li>css1</li>
+            <li>css2</li>
+            <li>여기는 자손</li>
+        </ul>
+        <li>여기는 자식</li>
+    </section>
+
+    <!-- section id와 ol -->
+    <h3>id추가</h3>
+    <section id="main">
+        <ol>
+            <li>html</li>
+        </ol>
+        <ul>
+            <li>html</li>
+        </ul>
+    </section>
+
+</body>
+</html>

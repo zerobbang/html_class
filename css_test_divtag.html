@@ -1,0 +1,31 @@
+<!-- 박스 사이즈 주의사항 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            margin:10px;
+            /* 박스 사이징으로 길이를 동일하게 조절한다. */
+            box-sizing: border-box;
+        }
+        #small{
+            /* border:blue solid 10px; */
+            border : 10px solid blue;
+        }
+        #large{
+            /* border:yellowgreen solid 30px; */
+            border: 30px solid yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <!-- div tag는 인라인 tag -->
+    <div id="small">휴먼교육센터1</div>
+    <div id="large">휴먼교육센터2</div>
+</body>
+</html>

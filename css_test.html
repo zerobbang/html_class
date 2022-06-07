@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 바로 style tag에 적용 -->
+    <!-- style tag보다는 링크가 더 우선 -->
+    <style>
+
+        h1{
+            color:darkslategrey;
+            font-size : 5px;
+        }
+        #main{
+            color: blue;
+        }
+        .main_class{
+            color: darkkhaki;
+        }
+
+        h2{
+            color: red;
+        }
+        #human-id{
+            color: yellow;
+        }
+        .human-class{
+            color: green;
+        }
+        h2[id]{
+            color: darkgray;
+        }
+    </style>
+   
+    <!--css파일 적용-->
+    <link href="./css/style.css" type="text/css" rel="stylesheet">
+</head>
+
+
+<body>
+    <h1>메인메뉴</h1>
+    <!-- 개별 tag에 적용  -->
+    <!-- <h1 style="color:blueviolet; font: size 5px;">메인메뉴</h1> -->
+    <h1 style="color:red; font: size 5px;">개별 TAG 스타일이 최우선</h1>
+    <h1>메인메뉴</h1>
+    <h1 id="main">id 적용 tag</h1>
+    <h1 class="main_class">class 적용 tag</h1>
+
+    <!-- id 가 첫번째 -->
+    <h2 id="human-id" class="'human-class">휴먼교육센터</h2>
+    <!-- class 가 두번째 -->
+    <h2 class="human-class">휴먼교육센터</h2>
+    <!-- 개별 tag가 세번쨰 -->
+    <h2>휴먼교육센터</h2>
+
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JAVA</li>
+    </ul>
+</body>
+</html>

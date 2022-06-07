@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: yellowgreen;
+            height: 300px;
+            display: flex;
+            flex-direction: row;
+        }
+        .item{
+            background-color: green;
+            border: 1px solid black;
+            width: 100px;
+            flex-grow: 1;
+        }
+        /* 하나만 적용하기 */
+        /* .item:nth-child(3){
+            flex-basis: 200px;
+        } */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+</body>
+</html>

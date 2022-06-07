@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            display: flex;
+            flex-direction: column;
+        }
+        header{
+            border-bottom: 1px solid gray;
+            background-color: antiquewhite;
+            padding-left: 20px;
+        }
+        footer{
+            border-top: 1px solid gray;
+            padding-left: 20px;
+        }
+        .contents{
+            display: flex;
+            flex-direction: row;
+        }
+        .contents nav{
+            border-right: 1px solid gray;
+        }
+        .contents aside{
+            border-left: 1px solid gray;
+        }
+        nav, aside{
+            flex-basis: 150px;
+            flex-shrink: 0;
+        }
+        main{
+            padding: 10px;
+        }
+        #story{
+            background-color: beige;
+        }
+        h2{
+            color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>가용이</h1>
+        </header>
+
+        <section class="contents">
+            <nav>
+                <li>내 소개</li>
+                <li>오늘의 기분</li>
+                <li>메모장</li>
+            </nav>
+            <main>
+                <h2>메모장</h2>
+                <p id="story">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur odio et eum, soluta veniam deleniti in id natus deserunt, vel, doloremque corporis alias! Sint quaerat beatae sequi dolorem possimus voluptas!</p>
+            </main>
+            <aside>
+                AD
+            </aside>
+        </section>
+
+        <footer>
+            <a href="http://www.naver.com">홈페이지</a>
+        </footer>
+    </div>
+</body>
+</html>
