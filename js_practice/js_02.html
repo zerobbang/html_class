@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let nums = new Array();
+        nums.push(3);
+        nums.push(13);
+        nums.push(25);
+        console.log(nums);
+
+        // nums에서 pop한 값을 n1에 저장한다.
+        let n1 = nums.pop();
+
+        console.log("nums : ", nums);
+        console.log("n1 : ",n1);
+
+        let arr = new Array(1,2,3,"Hi",4,new Array(5,6,7));
+        console.log(arr[3]);
+        console.log(arr[4]);
+        console.log(arr[5][0]);
+
+
+        //splice 배열 데이터 관리
+        //splice는 추가와 삭제 및 대체가 가능하다.
+        // arr.splice(2);  // 3 번째 이후로 다 삭제
+        // console.log(arr)
+        // arr.splice(2,1); // 3 번째 1개만 삭제
+        // console.log(arr)
+        // arr.splice(2,1,"안녕"); // 3번째에서 1개를 삭제하고 안녕 추가 즉, 대체 한다.
+        // console.log(arr)
+        arr.splice(2,0,"안녕"); // 3번째에서 안녕 추가
+        console.log(arr)
+        // 즉, splice로 list 관리 가능하다.
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
