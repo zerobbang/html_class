@@ -1,0 +1,64 @@
+<!-- 위 아래로 움직이기 -->
+<!-- 체크 박스 -->
+<!-- 현 코드에서는 위 아래 움직이는 것과 체크 박스를 사용하여 일괄 삭제 및 노드 바꾸기 기능은 같이 돌아가지 않는다. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="node_more.js"></script>
+</head>
+<body>
+    <section id="section">
+        <div>
+            <input class="up-button" type="button" value="위로">
+            <input class="down-button" type="button" value="아래로">
+            <input class="del-button" type="button" value="일괄 삭제">
+            <input class="swap-button" type="button" value="선택 노드 바꾸기">
+        </div>
+        <table border="1" class="notice-list">
+            <thead>
+                <tr>
+                    <td><input type="checkbox" class="overall-checkbox"></td>
+                    <td>번호</td>
+                    <td>제목</td>
+                    <td>내용</td>
+                    <td>작성자</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background-color: lightblue">
+                    <td><input type="checkbox"></td>
+                    <td>1</td>
+                    <td>가입신청</td>
+                    <td>가입을 신청합니다.</td>
+                    <td>가룔</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>2</td>
+                    <td>가입신청</td>
+                    <td>가입 신청해용.</td>
+                    <td>김지민</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>3</td>
+                    <td>가입신청</td>
+                    <td>가입을 신청합니다.</td>
+                    <td>박선후</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>4</td>
+                    <td>가입신청</td>
+                    <td>가입을 신청합니다.</td>
+                    <td>한희수</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</body>
+</html>

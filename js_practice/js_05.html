@@ -24,28 +24,33 @@
             btn3.value = x + y;
             btn3.type = "text";
         }
+
+        // -----------------------------------------------------------------------------
+
         // 이렇게 하면 변수가 정의 되기 전에 불러와지면서 변수 에러 발생
         // btn4.printResult1();
         // 다음과 같이 해결 - 모두가 온 로드 된 후에 실행한다.
-        function printResult3(){
-            var x,y;
-            x = eval(prompt ("X값 입력 = ", 0));
-            y = eval(prompt ("Y값 입력 = ", 0));
-            btn4.value = x+y;
-        }
-        function init(){
-            // 이렇게 해도 btn4값 제대로 불러오지 못함
-            // btn4.onclick = printResult3;
-            // 그래서 여기서는 getElementById 통해 객체 생성 후, 해당 객체의 이벤트 처리 
-            var printBtn = document.getElementById("btn4");
-            printBtn.onclick = printResult3();
-        }
-        // 모든 문서가 load 되었을 때 실행해라. -> 새로고침 하면 바로 실행 된다.
-        window.onload=init;
+        // 브라우저 플랫폼 사용
 
-        // 위와 다른 방법
+        // function printResult3(){
+        //     var x,y;
+        //     x = eval(prompt ("X값 입력 = ", 0));
+        //     y = eval(prompt ("Y값 입력 = ", 0));
+        //     btn4.value = x+y;
+        // }
+        // function init(){
+        //     // 이렇게 해도 btn4값 제대로 불러오지 못함
+        //     // btn4.onclick = printResult3;
+        //     // 그래서 여기서는 getElementById 통해 객체 생성 후, 해당 객체의 이벤트 처리 
+        //     var printBtn = document.getElementById("btn4");
+        //     printBtn.onclick = printResult3();
+        // }
+        // // 모든 문서가 load 되었을 때 실행해라. -> 새로고침 하면 바로 실행 된다.
+        // window.onload=init;
+
+        //// 위와 다른 방법
         // window.onload = function(){
-        //     let printBtn = window.document.getElementById("btn5");
+        //     let printBtn = document.getElementById("btn5");
         //     printBtn.onclick = function(){
         //         let x,y;
         //         x = eval(prompt ("X값 입력 = ", 0));
@@ -53,6 +58,12 @@
         //         btn5.value = x+y;
         //     };
         // };
+
+        // -----------------------------------------------------------------------------
+
+        // onload를 위와 같은 방식들로는 동시 호출이 불가능하다.
+        // 동시 호출 하는 방법 -> js_06.html 파일
+
     </script>
 
 </head>

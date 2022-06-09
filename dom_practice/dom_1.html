@@ -1,0 +1,35 @@
+<!-- img 변경하기 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="dom_1.js"></script>
+</head>
+<body>
+    <section id="section">
+        <div>
+            <input class="src-input" type="text" list="img-list">
+            <!-- img 속성 값을 이용해서 문서 변경 -->
+            <!-- datalist 사용 -->
+            <datalist id="img-list">
+                <option value="img1.jpg">img1</option>
+                <option value="img2.jpg">img2</option>
+                <option value="img3.jpg">img3</option>
+            </datalist>
+            <!-- combo box 사용 -->
+            <select class="img-select">
+                <option value="img1.jpg">img1</option>
+                <option value="img2.jpg">img2</option>
+                <option value="img3.jpg">img3</option>
+            </select>
+            <input class="change-button" type="button" value="변경하기">
+        </div>
+        <div>
+            <img class="img" src="images/img1.jpg">
+        </div>
+    </section>
+</body>
+</html>
