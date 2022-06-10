@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .file-button{
+            display: none;
+        }
+        .file-trigger-button{
+            background-color: cadetblue;
+            border: 1px solid blanchedalmond;
+            border-radius: 5px;
+            /* 2 개 값 padding 인 경우 상하 값, 좌우 값 순 */
+            padding: 5px 10px;
+            color: white;
+            /*마우스 올리면 커서 생성*/
+            cursor : pointer;
+        }
+        /*마우스 올라갔을 때 스타일 변경*/
+        .file-trigger-button:hover {
+            background-color: coral;
+
+        }
+    </style>
+    <script src="trigger.js"></script>
+</head>
+<body>
+    <section id="section">
+        <input type="file" class="file-button">
+        <span class="file-trigger-button">파일선택</span>
+    </section>
+</body>
+</html>
