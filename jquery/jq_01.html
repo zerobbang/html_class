@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 제이쿼리 실행 -->
+    <!-- 다음 코드 출처 : https://developers.google.com/speed/libraries#jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- <script src="./css/jquery-3.6.0.min.js"></script> -->
+    <!-- 첫번째 방법 -->
+    <script>
+        // 모든 문서가 로드가 되면..        
+        $(function(){
+           $(".human").html("hello, human").css("background-color","yellow");
+        });
+   </script>
+</head>
+<body>
+    <div class="human"></div>
+    <div class="human"></div>
+    <div class="human"></div>
+
+    <!-- 두번째 방법 -->
+    <!-- <script>
+        $(".human").html("hello").css("background-color",'yellow');
+    </script> -->
+</body>
+</html>

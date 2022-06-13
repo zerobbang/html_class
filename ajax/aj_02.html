@@ -1,0 +1,63 @@
+<!-- 비동기 fetch-->
+<!--  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            font-size: 40px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" value="click callbackMe" 
+        onclick="fetch('JAVASCRIPT').then(callbackme);
+            function callbackme(){
+                console.log('response_ok');
+            }
+            console.log(1);
+            console.log(2);
+            console.log(3);
+            "
+        >
+        <!-- 출력 순서 1,2,3 -> response_ok 출력 즉, 1,2,3이 찍히는 동안 javascript에서 데이터를 다 못 읽음. -->
+
+        <!-- JAVASCRIPT 문서 읽으면 response 변수에 담아오기 -->
+        <!-- response 변수의 text 함수를 통해 읽어온 값을 alert 하기-->
+    <input type="button" value="click AJAX"
+        onclick="fetch('JAVASCRIPT').then(function (response){
+                response.text().then(
+                    function(text){
+                        alert(text);
+                        console.log(response);
+                        console.log(response.ok);
+                        console.log(response.status);
+                        // 400이면 오류, 200이면 정상 상태
+                    }
+                )
+            });"
+    >
+    <!-- 정상 상태이면 html 파일안에 내용을 innerHTML을 이용해서 불러온다. -->
+    <input type="button" value="click AJAX_error처리"
+        onclick="fetch('css').then(function (response){
+                response.text().then(
+                    function(text){
+                        if (response.ok){
+                            document.querySelector('article').innerHTML=text;
+                            console.log('success');
+                        }
+                        else{
+                            console.log('error');
+                        }
+                    }
+                )
+            });"
+    >
+    <article></article>
+</body>
+</html>

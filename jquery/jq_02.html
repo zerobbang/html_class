@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+         // 모든 문서가 로드가 되면..        
+         $(function(){
+            //  직접선택자
+            $(".wrap-1").css("border","1px solid orange");
+            $(".wrap-1 p").css("background","yellow");
+            //  근접선택자
+            $(".active").next("p").css("background","aqua");
+            //  위치선택자
+            $(".wrap-1 p").eq(1).css("font-size","5px");
+            //  속성선택자
+            $("input[type=text]").css("background","orange");
+            //  객체조작 ==> class="active"라는 것을 없앰. aqua 색이 미적용
+            $(".wrap-1 p").eq(1).removeClass("active");
+            $(".active").next("p").css("background","aqua");
+            //  객체조작 ==> class="active"라는 것을 추가. aqua 색이 적용
+            $(".wrap-1 p").eq(1).addClass("active");
+            $(".active").next("p").css("background","aqua");
+            //  객체조작 ==> tag를 추가함.
+            $(".wrap-1").append("<p>휴먼교육센터</p>");
+         });
+    </script>
+</head>
+<body>
+    <div class="wrap-1">
+        <p>텍스트1</p>
+        <p class="active">내용2</p>
+        <p><a href="http://www.naver.com">네이버</a></p>
+        <p><input type="text" value="hello"></p>
+    </div>
+    <div class="wrap-2">
+        <p>내용5</p>
+        <p>내용6</p>
+    </div>
+</body>
+</html>

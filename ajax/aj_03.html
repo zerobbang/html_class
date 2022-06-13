@@ -1,0 +1,54 @@
+<!-- 비동기 통신으로 코딩해보기 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            font-size: 40px;
+            font-weight: bold;
+        }
+    </style>
+    <!-- 간략화 할 시 스크립트에서 함수화 처리 -->
+    <script>
+        // 함수로 만들어서 간략화
+        function click_page(file){
+            fetch(file).then(function(response){
+                response.text().then(function(text){
+                    document.querySelector('article').innerHTML=text;
+                })
+            });
+        }
+    </script>
+</head>
+<body>
+    <ol>
+        <!-- <li><a onclick="fetch('html').then(function(response){
+            response.text().then(function(text){
+                document.querySelector('article').innerHTML=text;
+            })
+        })">HTML</a></li>
+        <li><a onclick="fetch('css').then(function(response){
+            response.text().then(function(text){
+                document.querySelector('article').innerHTML=text;
+            })
+        })">CSS</a></li>
+        <li><a onclick="fetch('JAVASCRIPT').then(function(response){
+            response.text().then(function(text){
+                document.querySelector('article').innerHTML=text;
+            })
+        })">JAVA Script</a></li> -->
+        
+        <!-- 위 과정 간략하게 정리 -->
+        <li><a onclick = "click_page('html')">HTML</a></li>
+        <li><a onclick = "click_page('css')">CSS</a></li>
+        <li><a onclick = "click_page('JAVASCRIPT')">JAVASCRIPT</a></li>
+
+    </ol>
+    <article>
+    </article>
+</body>
+</html>
